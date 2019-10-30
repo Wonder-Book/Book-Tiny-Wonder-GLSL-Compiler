@@ -1,0 +1,1 @@
+[@bs.module "path"] external extname : string => string = "";

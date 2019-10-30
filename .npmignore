@@ -1,0 +1,12 @@
+.idea/
+.vscode/
+.DS_Store/
+lib/bs/
+lib/es6_global/
+build/
+reference/
+mine/
+server/
+example/
+dist/
+doc/

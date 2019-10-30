@@ -1,0 +1,17 @@
+{
+    "name": "tiny-wonder-glsl-compiler",
+    "version": "0.0.2",
+    "authors": "yyc",
+    "license": "MIT",
+    "main": "./lib/js/src/create.js",
+    "scripts": {
+        "watch": "bsb -clean-world -make-world -w",
+        "build": "bsb -clean-world -make-world"
+    },
+    "devDependencies": {
+        "bs-platform": "^5.2.0"
+    },
+    "dependencies": {
+        "tiny-wonder-commonlib": "latest"
+    }
+}

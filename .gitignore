@@ -1,0 +1,12 @@
+.bsb.lock
+.merlin
+.DS_Store
+.vscode/
+
+mine/
+
+node_modules/
+
+lib/
+
+dist/

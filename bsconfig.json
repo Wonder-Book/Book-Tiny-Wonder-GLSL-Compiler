@@ -1,0 +1,17 @@
+{
+    "name": "tiny-wonder-glsl-compiler",
+    "sources": [
+        {
+            "dir": "src",
+            "subdirs": true
+        }
+    ],
+    "refmt": 3,
+    "bs-dependencies": [
+        "tiny-wonder-commonlib"
+    ],
+    "package-specs": [
+        "commonjs"
+    ],
+    "namespace": false
+}
