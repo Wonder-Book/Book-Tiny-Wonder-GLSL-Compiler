@@ -5,8 +5,8 @@ let _getFunctionContent = () => {|
 
   let _getGLSLChunkMap = ({chunkMap}) => chunkMap;
 
-  let getChunk = (name: string, glslChunkRecord) =>
-    glslChunkRecord
+  let getChunk = (name: string, glslChunkData) =>
+    glslChunkData
     |> _getGLSLChunkMap
     |> TinyWonderCommonlib.ImmutableHashMap.get(name)
     |> Js.Option.getExn;
