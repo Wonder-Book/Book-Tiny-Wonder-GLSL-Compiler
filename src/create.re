@@ -37,10 +37,10 @@ let _buildInitDataContent = (glslContent: string) => {j|
     };
   |j};
 
-let _buildShunkSystemFileContent = glslContent =>
+let _buildShaderChunkFileContent = glslContent =>
   _getFunctionContent() ++ _buildInitDataContent(glslContent);
 
-let _writeToShunkSystemFile = (destFilePath, doneFunc, content) => {
+let _writeToShaderChunkFile = (destFilePath, doneFunc, content) => {
   Node.Fs.writeFileSync(destFilePath, content, `utf8);
   doneFunc(.) |> ignore;
 };
@@ -48,7 +48,7 @@ let _writeToShunkSystemFile = (destFilePath, doneFunc, content) => {
 let _convertArrayToList = (array: array(string)) =>
   array |> Js.Array.reduce((list, str) => [str, ...list], []);
 
-let createShunkSystemFile =
+let createShaderChunkFile =
     (glslPathArr: array(string), destFilePath: string, doneFunc) =>
   glslPathArr
   |> Js.Array.map(glslPath => Glob.sync(glslPath))
@@ -59,5 +59,5 @@ let createShunkSystemFile =
        |> Parse.parseSegment(actualGlslPath)
      )
   |> Parse.parseImport
-  |> _buildShunkSystemFileContent
-  |> _writeToShunkSystemFile(destFilePath, doneFunc);
+  |> _buildShaderChunkFileContent
+  |> _writeToShaderChunkFile(destFilePath, doneFunc);
